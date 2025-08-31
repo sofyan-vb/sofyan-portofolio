@@ -29,21 +29,18 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 document.addEventListener('DOMContentLoaded', () => {
-
     const sectionsToAnimate = document.querySelectorAll('.reveal-section');
 
     const observerOptions = {
-        root: null, // The viewport
+        root: null, 
         rootMargin: '0px',
-        threshold: 0.2 // Trigger when 20% of the element is visible
+        threshold: 0.2 
     };
 
     const sectionObserver = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                // When the section is in view, add the 'is-visible' class
                 entry.target.classList.add('is-visible');
-                // Stop observing after the animation has run once
                 observer.unobserve(entry.target);
             }
         });
