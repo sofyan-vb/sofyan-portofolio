@@ -1293,3 +1293,42 @@ footer {
     color: #966A4A; 
 }
 
+
+
+/* Initial state for all reveal sections */
+.reveal-section {
+    opacity: 0;
+    transition: opacity 1s ease-out, transform 0.8s ease-out;
+}
+
+/* Final (active) state for all reveal sections */
+.reveal-section.is-visible {
+    opacity: 1;
+    transform: translateY(0); /* Resets the vertical position */
+}
+
+/* Specific animations for each section */
+
+.reveal-from-left {
+    transform: translateX(-50px);
+}
+
+.reveal-from-left.is-visible {
+    transform: translateX(0);
+}
+
+.reveal-from-bottom {
+    transform: translateY(50px);
+}
+
+.reveal-from-bottom.is-visible {
+    transform: translateY(0);
+}
+
+.reveal-from-scale {
+    transform: scale(0.9);
+}
+
+.reveal-from-scale.is-visible {
+    transform: scale(1);
+}
