@@ -28,6 +28,305 @@ body {
 }
 
 
+
+.language-toggle {
+    cursor: pointer;
+    font-weight: 600;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    list-style-type: none; 
+    margin-left: 20px;
+    color: #ffffff !important;
+    background-color: rgba(243, 0, 0, 0.1); 
+    box-shadow: 0 0 8px rgb(248, 0, 0); 
+    animation: flicker 1.5s infinite alternate;
+}
+
+
+.language-toggle:hover {
+    box-shadow: 0 0 15px rgb(248, 0, 0); 
+}
+
+
+.language-toggle .fas {
+    margin-right: 5px;
+    font-size: 1rem;
+}
+
+.navbar-nav .nav-item, .language-toggle {
+    margin: 0 80px;
+}
+
+
+
+.btn-theme {
+    background-color: var(--button-bg);
+    border: 2px solid var(--button-border);
+    color: var(--button-text);
+    font-size: 1rem;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 5px var(--button-border); /* Efek glow */
+}
+
+.btn-theme:hover {
+    background-color: var(--hover-bg);
+    color: var(--bg-color);
+    transform: translateY(-2px);
+    box-shadow: 0 0 15px var(--hover-bg);
+}
+
+/* --- Variasi Warna Ikon --- */
+.btn-theme #theme-icon {
+    color: #E50914;
+    transition: color 0.3s ease;
+}
+
+.btn-theme:hover #theme-icon {
+    color: #E50914;
+}
+
+
+
+/* Modifikasi elemen navbar */
+body.light-theme .navbar {
+    background-color: rgb(112, 112, 110) !important;
+    backdrop-filter: blur(12px);
+}
+
+body.light-theme .navbar-brand {
+    color: #ffe600 !important; 
+    text-shadow: none;
+    animation: neon-flicker-yellow 2s infinite alternate;
+}
+
+body.light-theme .navbar-nav .nav-item a {
+    color: #eeff00 !important;
+}
+
+body.light-theme .navbar-nav .nav-item a:hover {
+    color: #ffd000 !important; 
+    background-color: transparent;
+    box-shadow: none;
+    animation: neon-flicker-yellow 1.5s infinite alternate;
+}
+
+body.light-theme .navbar-nav .nav-item a.active {
+    color: #ffb700 !important; 
+    background-color: transparent;
+    box-shadow: none;
+    animation: neon-flicker-yellow 1.5s infinite alternate;
+}
+
+body.light-theme .navbar-toggler {
+    border: 2px solid #f0ff00 !important; 
+    animation: neon-flicker-yellow 2s infinite alternate;
+}
+
+/* Modifikasi hero section */
+body.light-theme .hero-content h1,
+body.light-theme .hero-content p {
+    color: #ff9d00;
+    text-shadow: none;
+}
+
+/* Modifikasi konten utama */
+body.light-theme .main-content-panel,
+body.light-theme #skills,
+body.light-theme #projects,
+body.light-theme #contact {
+    background-color: #565656; 
+    color: #ffff00;
+    border: 2px solid #333333;
+    box-shadow: 4px 4px 0 #1a1a1a; 
+}
+
+
+
+body.light-theme .row.text-center.align-items-center.mt-4 .col-12 {
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+}
+
+body.light-theme .my-about-title,
+body.light-theme h2,
+body.light-theme h3 {
+    color: #ff9900;
+}
+
+body.light-theme .highlight-text {
+    color: #f2ff00;
+    text-shadow: none;
+}
+
+/* Modifikasi skills */
+body.light-theme .skill-card {
+    background-color: transparent;
+    border: 2px solid #d4ff00;
+    animation: none;
+}
+
+body.light-theme .skill-card:hover {
+    border-color: #f0ff00; /* Aksen Kuning Neon */
+    box-shadow: 0 0 15px rgba(240, 255, 0, 0.5);
+    animation: neon-flicker-yellow 1.5s infinite alternate;
+}
+
+body.light-theme .skill-card i {
+    filter: grayscale(100%);
+    opacity: 0.7;
+    transition: all 0.3s ease;
+    color: #e5ff00 !important;
+}
+
+body.light-theme .skill-card:hover i {
+    filter: none;
+    opacity: 1;
+    color: #ff9900 !important; /* Aksen Hijau Neon */
+    text-shadow: 0 0 5px rgb(255, 255, 0);
+}
+
+body.light-theme .skills-scroller::before,
+body.light-theme .skills-scroller::after {
+    background: linear-gradient(to right, #f2ff00 20%, transparent);
+}
+
+body.light-theme .skills-scroller::after {
+    background: linear-gradient(to left, #ffa200 20%, transparent);
+}
+
+/* Modifikasi project */
+body.light-theme .project-card {
+    background-color: #5c5730;
+    border: 2px solid #000000;
+    box-shadow: 4px 4px 0 #ffc400;
+}
+
+body.light-theme .project-card:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    animation: none;
+}
+
+body.light-theme .project-card h3 {
+    color: #fffb00; 
+    text-shadow: none;
+    animation: neon-flicker-yellow 1.5s infinite alternate;
+}
+
+/* Modifikasi form kontak */
+body.light-theme #contact-form input,
+body.light-theme #contact-form textarea {
+    background-color: #fbff00;
+    color: #1a1a1a;
+    border: 2px solid #1a1a1a;
+    box-shadow: none;
+}
+
+body.light-theme #contact-form input:focus,
+body.light-theme #contact-form textarea:focus {
+    border-color: #f2ff00;
+    box-shadow: 0 0 10px rgb(238, 255, 0);
+    animation: neon-flicker-yellow 1s infinite alternate;
+}
+
+body.light-theme .form-group label {
+    color: #ffd500;
+}
+
+body.light-theme .form-group:focus-within label {
+    color: #f0ff00; 
+    animation: none;
+}
+
+body.light-theme .btn-submit,
+body.light-theme .btn-cv,
+body.light-theme .btn-contact {
+    border-color: #ffb300; 
+    color: #fffb00; 
+    animation: neon-flicker-green 1.8s infinite alternate;
+}
+
+body.light-theme .btn-submit:hover,
+body.light-theme .btn-cv:hover,
+body.light-theme .btn-contact:hover {
+    color: #1a1a1a;
+    background-color: #ff8800; /* Aksen Hijau Neon */
+    transform: none;
+    box-shadow: 0 0 20px rgba(255, 217, 0, 0.943);
+    animation: none;
+}
+
+/* Modifikasi sosial media */
+body.light-theme .contact-socials a i {
+    color: #1a1a1a;
+}
+
+body.light-theme .contact-socials a:hover i {
+    color: #fbff00; /* Aksen Hijau Neon */
+    transform: none;
+    animation: neon-flicker-green 1.5s infinite alternate;
+}
+
+/* Atur ulang warna tombol language-toggle */
+body.light-theme .language-toggle {
+    color: #fffb00 !important;
+    background-color: transparent;
+    border: 2px solid #ffc400;
+    box-shadow: 4px 4px 0 #1a1a1a;
+    animation: none;
+}
+
+body.light-theme .language-toggle:hover {
+    box-shadow: none;
+    color: #ff6a00 !important;
+    border-color: #fbff00;
+    animation: neon-flicker-green 2s infinite alternate;
+}
+
+/* Hapus animasi flicker lain yang tidak diinginkan */
+body.light-theme .navbar-nav .nav-item a:hover,
+body.light-theme .navbar-nav .nav-link.active,
+body.light-theme .row.text-center.align-items-center.mt-4 h2 {
+    animation: none;
+    text-shadow: none;
+}
+
+
+/* Hapus animasi flicker lain yang tidak diinginkan */
+body.light-theme .navbar-nav .nav-item a:hover,
+body.light-theme .navbar-nav .nav-link.active,
+body.light-theme .row.text-center.align-items-center.mt-4 h2 {
+    animation: none;
+    text-shadow: none;
+}
+
+
+
+@keyframes neon-flicker-yellow {
+    0%, 100% {
+        box-shadow: 0 0 5px rgb(242, 255, 0), 0 0 15px rgb(255, 157, 0);
+    }
+    50% {
+        box-shadow: 0 0 8px rgb(246, 255, 0), 0 0 20px rgb(255, 136, 0);
+    }
+}
+
+@keyframes neon-flicker-green {
+    0%, 100% {
+        box-shadow: 0 0 5px rgba(255, 196, 0, 0.9), 0 0 15px rgb(255, 255, 255);
+    }
+    50% {
+        box-shadow: 0 0 8px rgba(255, 174, 0, 0.8), 0 0 20px rgba(255, 255, 254, 0.884);
+    }
+}
+
+
+
 /* === CSS UNTUK TOMBOL DOWNLOAD CV === */
 
 .btn-cv {
@@ -596,7 +895,7 @@ body {
 }
 
 .navbar-nav .nav-item a.active {
-    color: #ff4d4d !important;
+    color: #ffffff !important;
     background-color: rgba(255, 77, 77, 0.1);
     box-shadow: 0 0 8px rgb(255, 0, 0);
 }
@@ -681,7 +980,7 @@ body {
 
 
 #skills {
-    max-width: 1000px; 
+    max-width: fit-content; 
     margin-left: auto;
     margin-right: auto;
     margin-top: 50px;
@@ -698,7 +997,7 @@ body {
 .skills h2 {
     text-align: center;
     font-weight: 700; 
-    margin-bottom: 80px; 
+    margin-bottom: 120px; 
 }
 
 
