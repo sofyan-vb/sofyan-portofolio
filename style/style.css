@@ -127,12 +127,20 @@ body.light-theme .navbar-toggler {
     animation: neon-flicker-yellow 2s infinite alternate;
 }
 
+body:not(.light-theme) .language-toggle {
+    animation: flicker 1.5s infinite alternate;
+}
+
+
 /* Modifikasi hero section */
 body.light-theme .hero-content h1,
 body.light-theme .hero-content p {
     color: #ff9d00;
     text-shadow: none;
 }
+
+
+
 
 /* Modifikasi konten utama */
 body.light-theme .main-content-panel,
@@ -218,6 +226,26 @@ body.light-theme .project-card h3 {
     animation: neon-flicker-yellow 1.5s infinite alternate;
 }
 
+body.light-theme .project-links .btn {
+    background-color: transparent;
+    border: 2px solid #ff9900; /* Border oranye */
+    color: #fffb00; /* Teks oranye */
+    box-shadow: none; /* Hapus shadow dari tema gelap */
+    transition: all 0.4s ease-in-out;
+}
+
+body.light-theme .project-links .btn:hover {
+    background-color: #ff9900; /* Latar oranye saat hover */
+    color: #1a1a1a; /* Teks menjadi gelap agar kontras */
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(255, 153, 0, 0.6); 
+}
+
+/* Hapus efek ::before dari tema gelap */
+body.light-theme .project-links .btn::before {
+    background: none;
+}
+
 /* Modifikasi form kontak */
 body.light-theme #contact-form input,
 body.light-theme #contact-form textarea {
@@ -233,6 +261,55 @@ body.light-theme #contact-form textarea:focus {
     box-shadow: 0 0 10px rgb(238, 255, 0);
     animation: neon-flicker-yellow 1s infinite alternate;
 }
+
+body.light-theme .form-group.floating .form-control:focus {
+    border-bottom-color: #ff9900;
+    box-shadow: none; /* Hapus box-shadow statis agar tidak bentrok dengan animasi */
+    /* Terapkan animasi kelap-kelip kuning pada garis bawah */
+    animation: neon-flicker-yellow 2s infinite alternate;
+}
+
+body.light-theme .form-group.floating label {
+    color: #444444; /* Warna label awal menjadi abu-abu gelap */
+}
+
+body.light-theme .form-group.floating .form-control:focus + label,
+body.light-theme .form-group.floating .form-control:valid + label {
+    color: #ff9900; 
+}
+
+body.light-theme .form-group.floating .form-control:focus {
+    animation: none; 
+    border-bottom-color: #ff9900;
+    box-shadow: 0 1px 0 0 #ff9900;
+}
+
+
+body.light-theme .contact-socials a i {
+    color: #ff9900; 
+    text-shadow: none; 
+    transition: all 0.3s ease;
+    animation: light-theme-icon-glow 2s infinite alternate;
+}
+
+body.light-theme .contact-socials a:hover i {
+    color: #fffb00; 
+    transform: translateY(-5px);
+    text-shadow: 0 0 10px rgba(255, 251, 0, 0.7); 
+    animation: none;
+}
+
+@keyframes light-theme-icon-glow {
+  0%, 100% {
+    color: #ff9900; 
+    text-shadow: 0 0 5px rgb(255, 255, 255);
+  }
+  50% {
+    color: #fffb00; 
+    text-shadow: 0 0 15px rgba(255, 251, 0, 0.8);
+  }
+}
+
 
 body.light-theme .form-group label {
     color: #ffd500;
