@@ -1703,3 +1703,76 @@ footer {
 .reveal-from-scale.is-visible {
     transform: scale(1);
 }
+
+
+
+/* Media Query untuk Layar Tablet */
+@media (max-width: 991px) {
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 5rem;
+    }
+}
+
+/* Media Query untuk Layar Ponsel */
+@media (max-width: 768px) {
+    .skills h2 {
+        margin-bottom: 50px;
+    }
+
+    .skills-scroller {
+        /* Menonaktifkan efek scroll horizontal di layar kecil */
+        overflow: visible;
+        animation: none;
+    }
+
+    .skills-scroller::before,
+    .skills-scroller::after {
+        content: none;
+    }
+
+    .skills-grid {
+        /* Mengubah tata letak menjadi satu kolom */
+        grid-template-columns: 1fr;
+        gap: 3rem; /* Mengatur jarak antar item */
+        width: 100%;
+        animation: none;
+    }
+    
+    .skill-card {
+        height: 120px;
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+    
+    .skill-card i {
+        font-size: 4rem;
+    }
+}
+
+/* Menggabungkan semua media queries yang relevan */
+@media (max-width: 991px) {
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .skills-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .skills h2 {
+        margin-bottom: 30px;
+    }
+
+    .skills-scroller,
+    .skills-grid {
+        animation: none;
+        width: 100%;
+        overflow: visible;
+    }
+}
